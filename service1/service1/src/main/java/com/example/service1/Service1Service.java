@@ -11,7 +11,7 @@ public class Service1Service {
     private RestTemplate restTemplate;
 
     public String callService2() {
-        ResponseEntity<String> res = restTemplate.getForEntity("http://localhost:9092/api/hello", String.class);
+        ResponseEntity<String> res = restTemplate.getForEntity("http://SERVICE2/api/hello", String.class);
         return res.getBody();
     }
 }
